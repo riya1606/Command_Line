@@ -15,6 +15,12 @@ A filesystem organizes a computer’s files and directories into a tree structur
 <br/>
 
 You’re probably already familiar with this tree structure - Mac Finder and Windows Explorer represent the filesystem as trees as well.
+
+#### ls
+```
+ls
+```
+The terminal would display our current directory’s files and directories
 ## 2. Manipulation
 ## 3. Redirection
 ## 4. Configuration
