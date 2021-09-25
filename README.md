@@ -6,6 +6,7 @@ On Mac and Linux systems, we access the command line through something called Ba
 
 ### A. Filesystem
 A filesystem organizes a computer’s files and directories into a tree structure:
+![Filesystem](https://user-images.githubusercontent.com/62128029/134777967-9d896d41-5dcb-44e7-8017-96a40883badd.png)
 1. The first directory in the filesystem is the root directory. It is the parent of all other directories and files in the filesystem.
 <br/>
 2. Each parent directory can contain more child directories and files. In the filesystem on the right, blog/ is the parent of 2014/, 2015/, and hardware.txt.
