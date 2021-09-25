@@ -16,11 +16,41 @@ A filesystem organizes a computer’s files and directories into a tree structur
 
 You’re probably already familiar with this tree structure - Mac Finder and Windows Explorer represent the filesystem as trees as well.
 
-#### ls
+#### ls - List
 ```
-ls
+$ ls Desktop
+resume.pdf
+photo.png
+
 ```
-The terminal would display our current directory’s files and directories
+The shell command ls is used to list the contents of a directory. If no arguments are given, it will list the contents of the current working directory.
+
+#### pwd - Print Working Directory
+```
+$ pwd
+/Users/sonny/Downloads
+```
+The shell command pwd displays the file path from the root directory to the current working directory.
+
+#### mkdir - Make Directory
+```
+$ mkdir new-directory
+$ ls 
+old-directory    new-directory
+```
+The shell command mkdir is used to make a new directory in the filesystem according to its argument. If a file path is given, the new directory will be placed at the end. Otherwise, it will create a new directory in the current working directory.
+#### cd - Change Directory
+```
+$ cd some-directory
+$ cd ..
+```
+The shell command cd is used to move throughout the filesystem of a computer. It accepts a variety of arguments:
+* Full file paths.
+* Names of children of the current directory.
+* .. the parent of the current directory.
+
+
+#### 
 ## 2. Manipulation
 ## 3. Redirection
 ## 4. Configuration
