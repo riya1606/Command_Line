@@ -7,13 +7,10 @@ On Mac and Linux systems, we access the command line through something called Ba
 ### A. Filesystem
 A filesystem organizes a computer’s files and directories into a tree structure:
 ![Filesystem](https://user-images.githubusercontent.com/62128029/134777967-9d896d41-5dcb-44e7-8017-96a40883badd.png)
-1. The first directory in the filesystem is the root directory. It is the parent of all other directories and files in the filesystem.
-<br/>
-2. Each parent directory can contain more child directories and files. In the filesystem on the right, blog/ is the parent of 2014/, 2015/, and hardware.txt.
-<br/>
-3. Each directory can contain more files and child directories. The parent-child relationship continues as long as directories and files are nested.
-<br/>
 
+1. The first directory in the filesystem is the root directory. It is the parent of all other directories and files in the filesystem.
+2. Each parent directory can contain more child directories and files. In the filesystem on the right, blog/ is the parent of 2014/, 2015/, and hardware.txt.
+3. Each directory can contain more files and child directories. The parent-child relationship continues as long as directories and files are nested.
 You’re probably already familiar with this tree structure - Mac Finder and Windows Explorer represent the filesystem as trees as well.
 
 #### ls - List
@@ -21,7 +18,6 @@ You’re probably already familiar with this tree structure - Mac Finder and Win
 $ ls Desktop
 resume.pdf
 photo.png
-
 ```
 The shell command ls is used to list the contents of a directory. If no arguments are given, it will list the contents of the current working directory.
 
@@ -50,7 +46,24 @@ The shell command cd is used to move throughout the filesystem of a computer. It
 * .. the parent of the current directory.
 
 
-#### 
+#### touch - Make file 
+The touch command is a standard command used in UNIX/Linux operating system which is used to create, change and modify timestamps of a file.
+```
+$ touch keyboard.txt
+```
+#### clear
+clear is used to clear your terminal, which is useful when it’s full of previous commands and outputs. It doesn’t change or undo your previous commands, it just clears them from the view. You can scroll upwards to see them at any time.
+```
+clear
+```
+#### tab
+tab can be used to autocomplete your command. When you are typing the name of an existing file or directory, you can use tab to finish the rest of the name.
+
+#### up and down arrows
+The up and down arrows (↑ and ↓) can be used to cycle through your previous commands. ↑ will take you up through your most recent commands, and ↓ will take you back through to the most recent one.
+
+
+
 ## 2. Manipulation
 ## 3. Redirection
 ## 4. Configuration
