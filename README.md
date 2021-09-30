@@ -83,6 +83,21 @@ ls -t
 Orders files and directories by the time they were last modified.
 
 #### cat
+The cat command outputs the contents of a specified file.
+```
+cat action/superwoman.txt
+```
+This will output all the text from superwoman.txt. This is a useful command for peeking at files without opening them, and confirming the result of other commands that change the contents of files.
+
+#### cp
+The cp command copies files or directories. Below, we copy the contents of a source file into a destination file.
+```
+cp source.txt destination.txt 
+```
+We could also copy a file to a destination directory.
+```
+cp source.txt destination/
+```
 ## 3. Redirection
 ## 4. Configuration
 
