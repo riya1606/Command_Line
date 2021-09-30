@@ -65,6 +65,24 @@ The up and down arrows (↑ and ↓) can be used to cycle through your previous 
 
 
 ## 2. Manipulation
+#### ls, revisited
+We can use ls as is, or attach an option. Options modify the behavior of commands.
+```
+ls -a
+```
+The command above displays the contents of the working directory in more detail. This command displays all the files and directories, including those starting with a dot (.). Files starting with a dot are normally hidden, and don’t appear when using ls alone.
+The -a is called an option. Options modify the behavior of commands.
+We can also use 
+```
+ls -l
+```
+Lists all contents of a directory in long format, as well as the file permissions.
+```
+ls -t
+```
+Orders files and directories by the time they were last modified.
+
+#### cat
 ## 3. Redirection
 ## 4. Configuration
 
