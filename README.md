@@ -251,4 +251,82 @@ sed -i 's/snow/rain/g' forests.txt
 
 ## 4. Configuration
 
+### Introduction to Environment
+Each time we launch the terminal application, it creates a new session. The session immediately loads settings and preferences that make up the command line environment.
 
+We can configure the environment to support the commands and programs we create. This enables us to customize greetings and create nicknames (aliases) for commands, and create variables to share across commands and programs.
+
+### NANO
+```
+nano hello.txt
+```
+This will open the nano text editor.
+In nano, at the top of the window, type:
+```
+"Hello, I am nano." 
+```
+Using the menu at the bottom of the terminal for reference, type Ctrl + O (the letter, not zero) to save the file. The keys are not case-sensitive, so don’t worry about capitalizing.
+
+Press Enter, when prompted about the filename to write.
+
+Then type Ctrl + X to exit nano.
+
+Finally, type
+```
+cat hello.txt
+```
+to confirm that there are now contents in hello.txt.
+
+"nano is a command line text editor. It works the same way as a desktop text editor like TextEdit or Notepad, except that it is accessible from the command line and only accepts keyboard input."
+
+Let’s walk through what we did in the previous exercise:
+* The command nano hello.txt opens a new text file named hello.txt in the nano text editor.
+
+* "Hello, I am nano" is a text string entered in nano at the line indicated by the cursor.
+
+* The menu of keyboard commands at the bottom of the window allow us to save changes to hello.txt and exit nano. The ^ stands for the Ctrl key.
+
+Outside of nano, you can also use clear to clear the text in the current terminal window, moving the command prompt to the top of the screen. This is useful for when you want to make the terminal more readable after many commands.
+### BASH Profile
+A bash profile is a file used to store environment settings for your terminal, and it’s accessible by the name ~/.bash_profile.
+
+When a session starts, it loads the contents of the bash profile before executing commands.
+
+The ~ represents the user’s home directory.
+The . indicates a hidden file.
+The name ~/.bash_profile is important, since this is how the command line recognizes the bash profile.
+To open and edit bash you can use the following commands:
+```
+nano ~/.bash_profile
+```
+When you edit the bash profile, you can add commands to execute every time a new terminal session is started.
+
+For example, if you have an echo statement in the bash profile, that will echo when a terminal session begins.
+
+To activate the changes made in ~/.bash_profile for the current session, use this following command:
+```
+source ~/.bash_profile
+```
+This makes the changes in the bash profile available right away without closing the terminal and needing to start a new session.
+* Let’s edit the environment settings! In the terminal, type
+```
+nano ~/.bash_profile 
+```
+This opens up the existing, currently blank bash profile file in nano.
+* In ~/.bash_profile, at the top of the file, type:
+```
+echo "Welcome, Jane Doe" 
+```
+You can use your name in place of “Jane Doe.”
+
+* Type Ctrl + O to save the file.
+
+* Press Enter to write the filename.
+
+* Type Ctrl + X to exit nano.
+
+Then, once you’ve exited nano and are back in the terminal, press the Enter (or return for Mac) key onto a new line.
+* Finally, to see this greeting immediately, use:
+```
+source ~/.bash_profile 
+```
