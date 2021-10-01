@@ -330,3 +330,36 @@ Then, once you’ve exited nano and are back in the terminal, press the Enter (o
 ```
 source ~/.bash_profile 
 ```
+### ALIAS
+As we mentioned in the last exercise, you can add settings and commands that execute every time a new terminal session is started. One type of setting you can create is called an alias:
+```
+alias pd="pwd"
+```
+The alias command allows you to create keyboard shortcuts, or aliases, for commonly used commands.
+
+Here, alias pd="pwd" creates the alias pd for the pwd command, which is then saved in the bash profile.
+
+The pd alias will be available each time we open a new terminal session, and the output of pd will be the same as the pwd command.
+* Let’s continue configuring the environment by adding command aliases.
+
+Open ~/.bash_profile in nano.
+```
+nano ~/.bash_profile
+```
+* In ~/.bash_profile, on a new line, type:
+```
+alias pd="pwd"
+```
+Save the changes and exit out of nano.
+
+Once you’ve exited nano and are back in the terminal, press the Enter key onto a new line.
+
+* To make the alias in the current terminal sessions, type
+```
+source ~/.bash_profile
+```
+* Let’s try out the alias. Type:
+```
+pd
+```
+You should see the same output as you would by typing the pwd command.
