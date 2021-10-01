@@ -139,6 +139,29 @@ rm -r unwanted_directory
 Be careful when you use rm! It deletes files and directories permanently. There isn’t an undelete command, so once you delete a file or directory with rm, it’s gone.
 
 ## 3. Redirection
+Through redirection you can direct the input and output of a command to and from other files and programs, and chain commands together in a pipeline.
+### echo
+```
+$ echo "Hello"
+```
+The echo command accepts the string “Hello” as standard input, and echoes the string “Hello” back to the terminal as standard output.
+Let’s learn more about standard input, standard output, and standard error:
+
+* standard input, abbreviated as stdin, is information inputted into the terminal through the keyboard or input device.
+
+* standard output, abbreviated as stdout, is the information outputted after a process is run.
+
+* standard error, abbreviated as stderr, is an error message outputted by a failed process.
+### >
+```
+$ echo "Hello" > hello.txt
+```
+The > command redirects the standard output to a file. Here, "Hello" is entered as the standard input, and is then redirected to the file hello.txt by > .
+```
+$ cat deserts.txt > forests.txt
+```
+'>' takes the standard output of the command on the left, and redirects it to the file on the right. Here the standard output of cat deserts.txt is redirected to forests.txt.
+Note that > overwrites all original content in forests.txt. When you view the output data by using cat on forests.txt, you will see only the contents of deserts.txt.
 ## 4. Configuration
 
 
