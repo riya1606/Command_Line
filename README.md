@@ -363,3 +363,75 @@ source ~/.bash_profile
 pd
 ```
 You should see the same output as you would by typing the pwd command.
+You can also do this multiple times for multiple aliasis.
+### Environment Variables
+Environment variables are variables that can be used across commands and programs and hold information about the environment.
+```
+export USER="Jane Doe" 
+```
+* The line USER="Jane Doe" sets the environment variable USER to a name “Jane Doe”. Usually the USER variable is set to the name of the computer’s owner.
+* The line export makes the variable to be available to all child sessions initiated from the session you are in. This is a way to make the variable persist across programs.
+* At the command line, the command echo $USER returns the value of the variable. Note that $ is always used when returning a variable’s value. Here, the command echo $USER returns the name set for the variable.
+```
+echo $USER
+```
+### PS1 Environment Variable
+PS1 is an environment variable that defines the makeup and style of the command prompt.
+What happens when this is stored in ~/.bash_profile:
+```
+export PS1=">> "
+```
+* export PS1=">> " sets the command prompt variable and exports the variable. Here we change the default command prompt from $ to >>.
+* After using the source command, the command line displays the new command prompt.
+
+### HOME Environment Variable
+```
+$ echo $HOME 
+```
+The HOME variable is an environment variable that displays the path of the home directory ~. You can specify and change the HOME variable if needed, but in most cases this is not necessary.
+
+Here, by typing echo $HOME, the terminal displays the path /home/ccuser as output.
+
+### PATH Environment Variable
+PATH is an environment variable that stores a list of directories separated by a colon.
+
+```
+$ echo $PATH
+```
+Each directory contains scripts for the command line to execute. The PATH variable simply lists which directories contain scripts.
+
+For example, many commands we’ve learned are scripts stored in the /bin directory.
+```
+/bin/pwd
+```
+This is the script that is executed when you type the pwd command.
+```
+/bin/ls
+```
+This is the script that is executed when you type the ls command.
+
+In advanced cases, you can customize the PATH variable when adding scripts of your own.
+```
+echo $PATH
+```
+```
+/bin/pwd 
+```
+```
+/bin/ls 
+```
+### ENV
+The env command stands for “environment,” and returns a list of the environment variables for the current user.
+
+What happens when you type the env command?
+
+```
+env
+```
+The env command returns a number of variables, including PATH, PWD, PS1, and HOME. To select the value of a particular environment variable, let’s say PATH, you can use the following command:
+
+```
+env | grep PATH 
+```
+the command above displays the value of the PATH environment variable. Here the standard output of env is “piped” to the grep command. grep searches for the value of the variable PATH and outputs it to the terminal. Note that this is the same output as echo $PATH.
+
