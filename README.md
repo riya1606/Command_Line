@@ -98,6 +98,46 @@ We could also copy a file to a destination directory.
 ```
 cp source.txt destination/
 ```
+To copy multiple files into a directory, use cp with a list of source files as the first arguments, and the destination directory as the last argument. Here, we copy the files file1.txt and file2.txt into the same directory.
+
+```
+cp file1.txt file2.txt my_directory/ 
+```
+#### Wildcards
+In addition to using exact filenames as arguments, we can use special characters like * to select groups of files. These special characters are called wildcards. For example, here we use cp to copy all files in the current working directory into another directory.
+```
+cp *my_directory
+```
+Here, w*.txt selects all files in the working directory starting with “w” (prefix) and ending with “.txt” (suffix), and copies them to my_directory/.
+```
+cp w*.txt my_directory/
+```
+#### mv - move
+The mv command moves files. It’s similar to cp in its usage, except mv moves a file without making a copy.
+```
+mv my_file.txt my_directory/
+```
+Here we move my_file.txt into my_directory/.
+```
+mv my_file_1.txt my_file_2.txt my_directory/
+```
+To move multiple files into a directory, use mv with a list of source files as the first arguments, and the destination directory as the last argument. Here, we move my_file_1.txt and my_file_2.txt into my_directory/.
+```
+mv file_origin.txt file_renamed.txt
+```
+To rename a file, use mv with the old file as the first argument and the new file as the second argument. By moving file_original.txt into file_renamed.txt, we rename the file as file_renamed.txt.
+
+#### rm - remove
+The rm command deletes files and directories. Here we remove the file unwanted_file.txt from the filesystem.
+```
+rm unwanted_file.txt
+```
+The -r is an option that modifies the behavior of the rm command. The -r stands for “recursive,” and it’s used to delete a directory and all of its child directories.
+```
+rm -r unwanted_directory
+```
+Be careful when you use rm! It deletes files and directories permanently. There isn’t an undelete command, so once you delete a file or directory with rm, it’s gone.
+
 ## 3. Redirection
 ## 4. Configuration
 
