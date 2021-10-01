@@ -13,7 +13,7 @@ A filesystem organizes a computer’s files and directories into a tree structur
 3. Each directory can contain more files and child directories. The parent-child relationship continues as long as directories and files are nested.
 You’re probably already familiar with this tree structure - Mac Finder and Windows Explorer represent the filesystem as trees as well.
 
-#### ls - List
+### ls - List
 ```
 $ ls Desktop
 resume.pdf
@@ -21,21 +21,21 @@ photo.png
 ```
 The shell command ls is used to list the contents of a directory. If no arguments are given, it will list the contents of the current working directory.
 
-#### pwd - Print Working Directory
+### pwd - Print Working Directory
 ```
 $ pwd
 /Users/sonny/Downloads
 ```
 The shell command pwd displays the file path from the root directory to the current working directory.
 
-#### mkdir - Make Directory
+### mkdir - Make Directory
 ```
 $ mkdir new-directory
 $ ls 
 old-directory    new-directory
 ```
 The shell command mkdir is used to make a new directory in the filesystem according to its argument. If a file path is given, the new directory will be placed at the end. Otherwise, it will create a new directory in the current working directory.
-#### cd - Change Directory
+### cd - Change Directory
 ```
 $ cd some-directory
 $ cd ..
@@ -46,26 +46,26 @@ The shell command cd is used to move throughout the filesystem of a computer. It
 * .. the parent of the current directory.
 
 
-#### touch - Make file 
+### touch - Make file 
 The touch command is a standard command used in UNIX/Linux operating system which is used to create, change and modify timestamps of a file.
 ```
 $ touch keyboard.txt
 ```
-#### clear
+### clear
 clear is used to clear your terminal, which is useful when it’s full of previous commands and outputs. It doesn’t change or undo your previous commands, it just clears them from the view. You can scroll upwards to see them at any time.
 ```
 clear
 ```
-#### tab
+### tab
 tab can be used to autocomplete your command. When you are typing the name of an existing file or directory, you can use tab to finish the rest of the name.
 
-#### up and down arrows
+### up and down arrows
 The up and down arrows (↑ and ↓) can be used to cycle through your previous commands. ↑ will take you up through your most recent commands, and ↓ will take you back through to the most recent one.
 
 
 
 ## 2. Manipulation
-#### ls, revisited
+### ls, revisited
 We can use ls as is, or attach an option. Options modify the behavior of commands.
 ```
 ls -a
@@ -82,14 +82,14 @@ ls -t
 ```
 Orders files and directories by the time they were last modified.
 
-#### cat
+### cat
 The cat command outputs the contents of a specified file.
 ```
 cat action/superwoman.txt
 ```
 This will output all the text from superwoman.txt. This is a useful command for peeking at files without opening them, and confirming the result of other commands that change the contents of files.
 
-#### cp
+### cp
 The cp command copies files or directories. Below, we copy the contents of a source file into a destination file.
 ```
 cp source.txt destination.txt 
@@ -103,7 +103,7 @@ To copy multiple files into a directory, use cp with a list of source files as t
 ```
 cp file1.txt file2.txt my_directory/ 
 ```
-#### Wildcards
+### Wildcards
 In addition to using exact filenames as arguments, we can use special characters like * to select groups of files. These special characters are called wildcards. For example, here we use cp to copy all files in the current working directory into another directory.
 ```
 cp *my_directory
@@ -112,7 +112,7 @@ Here, w*.txt selects all files in the working directory starting with “w” (p
 ```
 cp w*.txt my_directory/
 ```
-#### mv - move
+### mv - move
 The mv command moves files. It’s similar to cp in its usage, except mv moves a file without making a copy.
 ```
 mv my_file.txt my_directory/
@@ -127,7 +127,7 @@ mv file_origin.txt file_renamed.txt
 ```
 To rename a file, use mv with the old file as the first argument and the new file as the second argument. By moving file_original.txt into file_renamed.txt, we rename the file as file_renamed.txt.
 
-#### rm - remove
+### rm - remove
 The rm command deletes files and directories. Here we remove the file unwanted_file.txt from the filesystem.
 ```
 rm unwanted_file.txt
