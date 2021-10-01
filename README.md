@@ -162,6 +162,18 @@ $ cat deserts.txt > forests.txt
 ```
 '>' takes the standard output of the command on the left, and redirects it to the file on the right. Here the standard output of cat deserts.txt is redirected to forests.txt.
 Note that > overwrites all original content in forests.txt. When you view the output data by using cat on forests.txt, you will see only the contents of deserts.txt.
+
+### >>
+Now we know how to overwrite a file’s contents, but what if we want to be able to add to a file without losing the original text? We can use the >> command!
+```
+$ cat deserts.txt >> forests.txt
+```
+'>>' takes the standard output of the command on the left and appends (adds) it to the file on the right. Here, the output data of forests.txt will contain the original contents of forests.txt with the content of deserts.txt appended to it.
+### <
+```
+$ cat < deserts.txt
+```
+'<' takes the standard input from the file on the right and inputs it into the program on the left. Here, deserts.txt is the standard input for the cat command. The standard output appears in the terminal.
 ## 4. Configuration
 
 
